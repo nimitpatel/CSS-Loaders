@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-Loader-2</title> 
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li></li> 
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<!--css styling-->
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+    ul {
+        display: flex;
+    }
+    ul li { 
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        list-style-type: none;
+        margin: 10px; 
+        animation: animate 1s ease-in-out infinite;
+    }
+    ul li:nth-child(1) {
+        background-color: #7fd8de;
+        animation-delay: 100ms;
+    }
+    ul li:nth-child(2) {
+        background-color: #71d4db;
+        animation-delay: 200ms;
+    }
+    ul li:nth-child(3) {
+        background-color: #64d0d7;
+        animation-delay: 300ms;
+    }
+    ul li:nth-child(4) {
+        background-color: #56cbd4;
+        animation-delay: 400ms;
+    }
+    ul li:nth-child(5) {
+        background-color: #49c7d0;
+        animation-delay: 500ms;
+    }
+    ul:hover li {
+        transition: 0.5s all ease;
+    }
+    ul:hover li:nth-child(1) {
+        animation-delay: -1ms;
+    }
+    ul:hover li:nth-child(2) {
+        animation-delay: -0.8ms;
+    }
+    ul:hover li:nth-child(3) {
+        animation-delay: -0.6ms;
+    }
+    ul:hover li:nth-child(4) {
+        animation-delay: -0.4ms;
+    }
+    ul:hover li:nth-child(5) {
+        animation-delay: -0.2ms;
+    }
+    @keyframes animate {
+        0%, 40%, 100% {
+        transform: scale(0);
+        } 
+        20% {
+        transform: scale(1);
+        }
+    }
+</style>
+</body>
+</html>
